@@ -1,0 +1,31 @@
+.menu-cor{
+    background-color: #2165BF;
+    ;
+}
+
+/* .pb-10{
+    margin-bottom: 10pt;
+} */
+
+.fa-search{
+    font-size: 15pt;
+}
+
+
+.fa-search:hover{
+    color: #7CCEBA;
+}
+
+.fonte-cor{
+    font-size: 12pt;
+    color:#7CCEBA;
+}
+
+.item-form{
+    margin-left: 10px;
+}
+
+.item-form a:hover{
+    color: #7CCEBA;
+}
+
