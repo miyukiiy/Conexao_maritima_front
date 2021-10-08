@@ -7,6 +7,7 @@ export class Usuario{
     public tipo: string
     public usuario: string
     public foto: string
+    // public dataNascimento: Date;
     public postagem: Postagem[]
 
 }
