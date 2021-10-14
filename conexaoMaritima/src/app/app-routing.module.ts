@@ -12,7 +12,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'entrar', pathMatch: 'full'},
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
   {path:'entrar', component: EntrarComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path:'sobre', component: SobreComponent},

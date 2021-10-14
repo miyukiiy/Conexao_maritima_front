@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    
+    
+}
+
+
+
+.color{
+    color: black;
+    min-width: 10px;
+    min-height: 10vh;
+    font-size: 0.9rem;
+    background-color: white;
+    border: none;
+    padding: 2px 20px;
+    border-radius: 10px;
+
+}
+
+.fundo1 {
+    background-color: #7CCEBA; 
+}
+.fundo2 {
+    background-color: #FFEEAD; 
+}
+
+.carousel-inner {
+    background-color: #2165BF;
+}
+
+.controls-top {
+    background-color: #2165BF;
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700&display=swap');
 
 * {
     margin: 0;
@@ -30,7 +30,7 @@
 }
 
 .centro h1{
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 2rem;
     position: relative;
 }
