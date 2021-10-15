@@ -1,12 +1,16 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+}
 .menu-cor{
     background: #FF8E8B;
-    
+    font-weight: 400;
 }
 
-/* .pb-10{
+ .pb-10{
     margin-bottom: 10pt;
-} */
-
+} 
 .fa-search{
     font-size: 15pt;
 }
@@ -27,5 +31,5 @@
 
 .item-form a:hover{
     color: #7CCEBA;
-}
+} 
 

@@ -32,7 +32,9 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar() {
     this.usuario.tipo = this.tipoUser
-  
+    if(this.usuario.foto = ''){
+      this.usuario.foto = 'https://i.imgur.com/tfcDSn8.png'
+      }
     if(this.usuario.senha != this.confirmarSenha){
       alert('As senhas não confirmam!!')
     }else{
@@ -45,4 +47,9 @@ export class CadastrarComponent implements OnInit {
     }
   }
 
-}
+  // logar(){
+  //   if(this.usuario.foto = ''){
+  //     this.usuario.foto = 'https://i.imgur.com/tfcDSn8.png'
+  //     }
+  // }
+}  

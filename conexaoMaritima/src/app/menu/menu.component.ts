@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   nome = environment.nome
   foto = environment.foto
   id = environment.id
+  // usuario = environment.usuario
 
   constructor(
     private router: Router
@@ -27,5 +28,14 @@ export class MenuComponent implements OnInit {
     environment.foto = ''
     environment.id = 0
   }
+  logado() {
+    let ok: boolean = false;
 
+    if (environment.token != '') {
+      ok = true;
+    }
+
+    return ok;
+  }
+  
 }
