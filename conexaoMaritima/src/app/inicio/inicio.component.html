@@ -83,11 +83,16 @@
 
     <!--Indicators-->
 
-    <ol class="carousel-indicators">
-      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-      <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <div>
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+      </ol>
+    </div> 
 
-    </ol>
+    
+
+    
     <!--/.Indicators-->
 
     <!--Slides-->
@@ -214,7 +219,7 @@
 
 
 
-
+<!-- 
     <div class="row bg-dark d-flex align-items-center">
         <div class="col-md-6">
 
@@ -324,54 +329,194 @@
       </div>
   </div>
 </div>
+ -->
+ <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top coramarela">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </div>
+    
+  <!--/.Controls-->
+
+  <!--Indicators-->
+
+  <div>
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+    </ol>
+  </div> 
+  <!--/.Indicators-->
 
 
+  <!-- carosel 2 -->
+  <!--Slides-->
 
+ 
+    <div class="carousel-inner coramarela" role="listbox">
 
-
-
-
-
-
+      <!--First slide-->
+      <div class="carousel-item active">
   
-  <!-- Modal -->
-  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Nova Postagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-
-          <div class="form-group">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Digite o Título">
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="tema">Escolha um Tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>: </label>
-            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-                <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
-                  {{tema.descricao}}
-                </option>
-            </select>
-          </div>
-
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
-          <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!--/.First slide-->
+  
+      <!--Second slide-->
+      <div class="carousel-item">
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!--/.Second slide-->
+    <!--/.Slides-->
+  </div>
+  </div>
+  
+  <!--/.Carousel Wrapper-->
+  
+  
+   
+  
+  
+  
+  
+    
+    <!-- Modal -->
+    <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Nova Postagem</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+  
+            <div class="form-group">
+              <label for="titulo">Título</label>
+              <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Digite o Título">
+            </div>
+            
+            <div class="form-group">
+              <label for="texto">Texto</label>
+              <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+            </div>
+  
+            <div class="form-group">
+              <label for="tema">Escolha um Tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>: </label>
+              <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
+                    {{tema.descricao}}
+                  </option>
+              </select>
+            </div>
+  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  
 
   
