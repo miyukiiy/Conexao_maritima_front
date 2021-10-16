@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
+/* a */
 
 @Component({
   selector: 'app-cadastrar',
@@ -32,7 +33,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar() {
     this.usuario.tipo = this.tipoUser
-    if(this.usuario.foto = ''){
+    if(this.usuario.foto == null || this.usuario.foto == ''){
       this.usuario.foto = 'https://i.imgur.com/tfcDSn8.png'
       }
     if(this.usuario.senha != this.confirmarSenha){

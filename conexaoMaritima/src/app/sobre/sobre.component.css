@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;    
+}
+
 .pt-10{
     padding-top: 5%;
 }
@@ -86,4 +93,37 @@
     font-family: 'Roboto Black', sans-serif;
     letter-spacing: 1px;
     color: #00acc1;
+}
+
+.wavetop{
+    background: #FFEEAD;
+}
+
+.corfundo{
+    background: #FFEEAD;
+}
+
+
+
+.imagem{    
+    max-width: 150px;
+    max-height: 150px; 
+    margin-top: -150px; 
+    border: 3px solid #2c2c2c;
+    background-color: #2165BF;
+    ;
+    border-radius: 100px;
+}
+
+.corfundo{
+    display: flex;
+    justify-content: center;
+    background-color: #FFEEAD;
+}
+
+.texto{
+    margin-top: 30px;
+    font-size: 20px;
+    text-align:justify; 
+    font-weight: 400;  
 }
