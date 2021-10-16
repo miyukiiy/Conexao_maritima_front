@@ -30,10 +30,11 @@
 
 .carousel-inner {
     background-color: #2165BF;
+
 }
 
 .controls-top {
-    background-color: #2165BF;
+    background-color:#2165BF; 
 }
 
 .btn-carousel{
@@ -42,9 +43,23 @@
 
 .coramarela {
     background-color: #FFEEAD;
-    padding-bottom: 15px;
 }
 
 .controls-top2 {
     background-color: #FFEEAD;
 }
+
+.card {
+    border-radius: 20px;
+}
+
+.card-img-top {
+    border-radius: 20px;
+}
+
+.margem{
+    padding-bottom: 50px;
+}
+
+
+
