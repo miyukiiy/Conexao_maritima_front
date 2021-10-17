@@ -1,0 +1,39 @@
+/* .container-fluid{
+    max-width: 100%;
+    height: auto;
+
+}
+
+.wave{
+position: relative;
+}
+*/
+
+.fundo{
+    background-color: #FFEEAD;
+} 
+
+.container-fluid{
+    margin-top: 30px;
+}
+
+
+#main-banner {
+    padding: 0;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url(https://i.imgur.com/u1Oj44f.png);
+    background-repeat: no-repeat;;
+}
+
+#main-banner-content {
+    max-width: 100%;
+    height: auto;
+    
+    margin-top: 150px;
+   
+}
+
+.card-text{
+    margin-top: 20px;
+}

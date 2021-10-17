@@ -30,8 +30,11 @@
       <li class="nav-item active item-form">
         <a class="nav-link" routerLink='/sobre'>Sobre nós<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active item-form">
+      <li *ngIf="!logado()" class="nav-item active item-form">
         <a class="nav-link" routerLink='/entrar'>Entrar<span class="sr-only">(current)</span></a>
+      </li>
+      <li *ngIf="logado()" class="nav-item active item-form" data-toggle="modal" data-target="#novaPostagem">
+        <a class="nav-link" href="#">Fazer postagem<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -40,7 +43,7 @@
     </form>
 
     <ul class="navbar-nav ml-auto d-flex align-items-center">
-      <li class="nav-item pl-3">
+      <li *ngIf="logado()" class="nav-item pl-3">
           <a (click)='sair()' class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
       </li>
     </ul>
