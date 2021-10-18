@@ -35,6 +35,12 @@
     position: relative;
 }
 
+.login{
+
+  margin-top: -300px;
+
+}
+
 .form-group{
     margin: 20px;
     

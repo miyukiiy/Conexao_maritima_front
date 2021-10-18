@@ -1,50 +1,49 @@
-<nav class="navbar navbar-expand-lg navbar-light menu-cor">
-  <a class="navbar-brand text-white" href="#">Conexão Marítima</a>
+<nav class="navbar navbar-expand-lg navbar-light menu-cor ">
+  <img routerLink='/inicio' class= "logo ml-3" src="https://i.imgur.com/mrHpGjb.png" alt="">
+
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li *ngIf="logado()" class="nav-item active">
-            <img src="{{foto}}" alt="imagem do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
-        </li>
-        <li *ngIf="logado()" class="nav-item pl-3">
-            <p class="m-0 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
-        </li>
-        <li *ngIf="logado()" class="nav-item pl-3">
-            <a [routerLink]="['/user-edit', id]">
-                <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></p>
-            </a>
-        </li>
-    </ul>
+    
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto fonte-cor">
-      <li class="nav-item active item-form">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      <li class="nav-item active item-form pr-4">
+        <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active item-form">
-        <a class="nav-link" href="#">Eventos<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active item-form">
-        <a class="nav-link" routerLink='/sobre'>Sobre nós<span class="sr-only">(current)</span></a>
-      </li>
-      <li *ngIf="!logado()" class="nav-item active item-form">
-        <a class="nav-link" routerLink='/entrar'>Entrar<span class="sr-only">(current)</span></a>
+     
+      <li class="nav-item active item-form pr-4">
+        <a class="nav-link" routerLink='/sobre'>SOBRE NÓS<span class="sr-only">(current)</span></a>
       </li>
       <li *ngIf="logado()" class="nav-item active item-form" data-toggle="modal" data-target="#novaPostagem">
-        <a class="nav-link" href="#">Fazer postagem<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">NOVA POSTAGEM<span class="sr-only">(current)</span></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0  justify-content-end align-items-end ">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
       <button class="btn btn-outline my-2 my-sm-0 botao-cor" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
     </form>
 
-    <ul class="navbar-nav ml-auto d-flex align-items-center">
-      <li *ngIf="logado()" class="nav-item pl-3">
-          <a (click)='sair()' class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    <ul class="navbar-nav ml-auto d-flex align-items-center fonte-cor"> 
+      <li *ngIf="logado()" class="nav-item active">
+        <img src="{{foto}}" alt="imagem do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
+    </li>
+    <li *ngIf="logado()" class="nav-item pl-3 ">
+        <p class="m-0  corpreto fs-16">Olá, {{nome}}</p>
+    </li>
+    <li *ngIf="logado()" class="nav-item pl-3 padUsuario">
+        <a [routerLink]="['/user-edit', id]">
+            <p class="corpreto fs-16 m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></p>
+        </a>
+    </li>
+      <li *ngIf="!logado()" class="nav-item active item-form pr-3 ">
+        <a class="nav-link" routerLink='/entrar'>ENTRAR<span class="sr-only">(current)</span></a>
+      </li>
+      <li *ngIf="logado()" class="nav-item pl-3 pr-5">
+          <a (click)='sair()' class="m-0  corpreto fs-16 ">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
       </li>
     </ul>
   </div>

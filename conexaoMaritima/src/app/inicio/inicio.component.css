@@ -62,7 +62,9 @@
 }
 
 .fundolista{
-    background-color: #FFEEAD
+    background-color: #FFEEAD;
+    margin-top: -150px;
+    
 }
 
 .list{
@@ -70,5 +72,28 @@
     margin-bottom: 20px;
 }
 
+.imgcarrossel{
+    height: 90vh;
+    width: 210vh;
 
+}
+.cardtitulo{
+    font-weight: bold;
+}
+.cards{
+    font-size: 20px;
+}
+
+
+@media (max-width : 768px) {
+    .fundolista {
+    
+        margin-top: 15px;
+    }
+
+    .imgcarrossel{
+        height: 40vh;
+        width: 110vh;
+    }
+}
 

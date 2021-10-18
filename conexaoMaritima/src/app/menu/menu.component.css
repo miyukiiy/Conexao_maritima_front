@@ -21,7 +21,7 @@ html{
 }
 
 .fonte-cor{
-    font-size: 12pt;
+    font-size: 17pt;
     color:#7CCEBA;
 }
 
@@ -30,6 +30,18 @@ html{
 }
 
 .item-form a:hover{
-    color: #2165BF;
+    color: white;
 } 
 
+.logo{
+    height: 60px;
+    padding-right: 100px;
+} 
+
+.padUsuario{
+    padding-right: 90px;
+}
+
+.corpreto{
+    color: black;
+}

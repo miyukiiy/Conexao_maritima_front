@@ -97,6 +97,8 @@ html{
 
 .wavetop{
     background: #FFEEAD;
+    margin-top: -150px;
+
 }
 
 .corfundo{
@@ -123,7 +125,11 @@ html{
 
 .texto{
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 30px;
     text-align:justify; 
     font-weight: 400;  
+}
+
+.tamanho{
+    font-size: 60px;
 }
