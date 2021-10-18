@@ -92,12 +92,12 @@ html{
     text-transform: uppercase;
     font-family: 'Roboto Black', sans-serif;
     letter-spacing: 1px;
-    color: #00acc1;
+    color: #000000;
 }
 
 .wavetop{
     background: #FFEEAD;
-    margin-top: -150px;
+    margin-top: -100px;
 
 }
 
@@ -125,11 +125,11 @@ html{
 
 .texto{
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 25px;
     text-align:justify; 
     font-weight: 400;  
 }
 
 .tamanho{
-    font-size: 60px;
+    font-size: 35px;
 }

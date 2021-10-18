@@ -17,11 +17,11 @@ html{
 
 
 .fa-search:hover{
-    color: #7CCEBA;
+    color: white;
 }
 
 .fonte-cor{
-    font-size: 17pt;
+    font-size: 12pt;
     color:#7CCEBA;
 }
 
@@ -34,7 +34,7 @@ html{
 } 
 
 .logo{
-    height: 60px;
+    height: 40px;
     padding-right: 100px;
 } 
 

@@ -34,11 +34,14 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    window.scroll(0,0)
     // // if(environment.token == ''){
     //   this.router.navigate(['/entrar'])
     //   //alert('Sua sessão expirou, realize o Login novamente!')
     // }
 
+    this.postagemService.refreshToken()
+    this.temaService.refreshToken()
     this.authService.refreshToken()
     this.getAllTemas()
     this.getAllPostagens()
@@ -87,4 +90,14 @@ export class InicioComponent implements OnInit {
 
   }
 
+  logado() {
+    let ok: boolean = false;
+
+    if(environment.token != ''){
+      ok = true
+    }
+
+    return ok
+  }
+  
 }
