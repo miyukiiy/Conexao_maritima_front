@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;    
+}
+
+.wavetop{
+    background: #FFEEAD;
+    margin-top: -50px; 
+
+}
+
+.corfundo{
+    background: #FFEEAD;
+}
