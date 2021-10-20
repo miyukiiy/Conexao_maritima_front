@@ -42,5 +42,17 @@ export class PostagemService {
     return this.http.delete(`https://conexaomaritima.herokuapp.com/postagens/${id}` , this.token)
   }
 
+  putCurtir(id: number): Observable<Postagem>{
+    return this.http.put<Postagem>(`https://conexaomaritima.herokuapp.com/postagens/curtir/${id}`, this.token)
+ }
+ 
+ putDescurtir(id: number): Observable<Postagem>{
+    return this.http.put<Postagem>(`https://conexaomaritima.herokuapp.com/postagens/descurtir/${id}`, this.token)
+ }
+ 
+ putParticipar(id: number): Observable<Postagem>{
+    return this.http.put<Postagem>(`https://conexaomaritima.herokuapp.com/postagens/participar/${id}`, this.token)
+ }
+
 
 }

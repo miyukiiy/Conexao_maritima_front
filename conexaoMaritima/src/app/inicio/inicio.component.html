@@ -116,7 +116,7 @@
                  {{postagem.dataEvento | date: 'dd/MM/yyyy'}} <!--às {{postagem.dataEvento | date: 'HH:mm'}} -->
             </small></p>
 
-              <a class="btn btn-primary">Veja Mais!</a>
+              <a [routerLink]="['/postar', postagem.id]" class="btn btn-primary">Veja Mais!</a>
             </div>
           </div>
         </div>

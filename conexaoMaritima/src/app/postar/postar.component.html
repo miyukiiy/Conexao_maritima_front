@@ -1,6 +1,5 @@
-<div id="main-banner">
+<div id="main-banner" style='background-image:url({{postagem.fotoPostagem}})'>
 
-    
     
     <div id="main-banner-content">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=#FFEEAD fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
@@ -9,27 +8,26 @@
     
 </div>
 
+
 <div class="container-fluid row d-flex fundo p-0 m-0">
     <div class="col-sm-7 ">
-      <div class="card">
+      <div class="card ml-5 mr-3">
         <div class="card-body">
-          <h1 class="card-title">Bora Ajudar!</h1>
-          <p class="card-text">No entanto, não podemos esquecer que a contínua expansão de nossa atividade talvez venha a ressaltar a relatividade do impacto na agilidade decisória.</p>
+          <h1 class="card-title">{{postagem.titulo}}</h1>
+          <p class="card-text">{{postagem.texto}}</p>
         </div>
       </div>
     </div>
     <div class="col-sm-5">
-      <div class="card">
+      <div class="card  mr-5">
         <div class="card-body">
             <div class="container-fluid row d-flex fundo p-0 m-0">
-          <h5 class="card-title">nome do usuario</h5>
-          <!-- <li *ngIf="logado()" class="nav-item active"> -->
+          <h5 class="card-title">{{postagem.usuario.nome}}</h5>
             <li>
-            <img src="foto" alt="imagem do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
+            <img src="{{postagem.usuario.foto}}" alt="imagem do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
         </li>
     </div>
-        <p class="card-text">data/ horario</p>
-        <p class="card-text">local</p>
+        <p class="card-text">{{postagem.dataEvento | date: 'dd/MM/yyyy'}}</p>
           <a href="#" class="btn btn-primary mr-4">EU VOU!</a>
           <a href="#" class="btn btn-primary">Curtir</a>
         </div>
