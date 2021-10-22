@@ -9,16 +9,12 @@ import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-minhas-postagens',
+  templateUrl: './minhas-postagens.component.html',
+  styleUrls: ['./minhas-postagens.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MinhasPostagensComponent implements OnInit {
 
-  nome = environment.nome
-  foto = environment.foto
-  id = environment.id
-  // usuario = environment.usuario
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
@@ -29,7 +25,6 @@ export class MenuComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
-
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -37,14 +32,19 @@ export class MenuComponent implements OnInit {
     private authService: AuthService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(){
     window.scroll(0,0)
-    
-    this.postagemService.refreshToken()
-    this.temaService.refreshToken()
-    this.authService.refreshToken()
-    this.getAllTemas()
-    this.getAllPostagens()
+
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+      //alert('Sua sessão expirou, realize o Login novamente!')
+    }
+
+    this.authService.refreshToken();
+    this.findByIdUsuario();
+    this.getAllTemas();
+    this.getAllPostagens();
+
   }
 
   getAllTemas(){
@@ -59,7 +59,7 @@ export class MenuComponent implements OnInit {
       this.usuario = resp
     })
   }
-
+  
 
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
@@ -73,41 +73,4 @@ export class MenuComponent implements OnInit {
     })
   }
 
-  
-  publicar(){
-    this.tema.id = this.idTema
-    this.postagem.tema = this.tema
-
-    this.usuario.id = this.idUsuario
-    this.postagem.usuario = this.usuario
-
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp
-      alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem()
-      this.getAllPostagens() 
-    })
-
-  }
-
-
-
-
-  sair(){
-    this.router.navigate(['/entrar'])
-    environment.token = ''
-    environment.nome = ''
-    environment.foto = ''
-    environment.id = 0
-  }
-  logado() {
-    let ok: boolean = false;
-
-    if (environment.token != '') {
-      ok = true;
-    }
-
-    return ok;
-  }
-  
 }

@@ -10,4 +10,7 @@ export class Postagem{
      public tema: Tema
      public dataEvento: Date
      public fotoPostagem: string
+     public curtir: number
+     public descurtir: number
+     public participar: number
 }
