@@ -9,6 +9,8 @@ position: relative;
 }
 */
 
+
+
 .fundo{
     background-color: #FFEEAD;
 } 
@@ -35,4 +37,17 @@ position: relative;
 
 .card-text{
     margin-top: 20px;
+}
+
+.corfundo{
+    background: #7CCEBA;
+}
+
+.corbotao{
+    background: #FF8E8B;
+}
+
+.btn{
+    font-size: 25px;
+    background-color: #FF8E8B;
 }
