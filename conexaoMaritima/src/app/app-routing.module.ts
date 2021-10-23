@@ -25,8 +25,13 @@ const routes: Routes = [
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
   {path: 'user-edit/:id', component: UserEditComponent},
+<<<<<<< HEAD
   {path: 'postar/:id', component: PostarComponent},
   {path: 'minhas-postagens', component: MinhasPostagensComponent}
+=======
+  {path: 'postar/:id', component: PostarComponent}
+
+>>>>>>> 50f67f4a1c2a2c1fd54cda56fbcb2bbc638fa0fc
 ];
 
 @NgModule({

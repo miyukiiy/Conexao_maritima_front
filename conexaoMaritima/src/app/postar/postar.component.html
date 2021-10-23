@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <div id="main-banner" style='background-image:url({{postagem.fotoPostagem}})' 
 height="90vh" width= "210vh">
+=======
+<div id="main-banner" style='background-image:url({{postagem.fotoPostagem}})'>
+>>>>>>> 50f67f4a1c2a2c1fd54cda56fbcb2bbc638fa0fc
 
     
     <div id="main-banner-content">
@@ -10,8 +14,12 @@ height="90vh" width= "210vh">
 </div>
 
 
+<<<<<<< HEAD
 <div class="container-fluid row d-flex fundo p-0 m-0 pb-5 pt-4">
 
+=======
+<div class="container-fluid row d-flex fundo p-0 m-0 pb-5">
+>>>>>>> 50f67f4a1c2a2c1fd54cda56fbcb2bbc638fa0fc
     <div class="col-sm-7 ">
       <div class="card ml-5 mr-3 corfundo">
         <div class="card-body">
@@ -22,6 +30,7 @@ height="90vh" width= "210vh">
     </div>
 
     <div class="col-sm-5">
+<<<<<<< HEAD
       <div class="card corfundo">
         <div class="card-body corfundo">
             <div class="container-fluid row d-flex p-0 m-0">
@@ -31,6 +40,17 @@ height="90vh" width= "210vh">
             <h5 class="card-title pl-3">Postado por {{postagem.usuario.nome}}</h5>
     </div>
         <p class="card-text">Data do evento {{postagem.dataEvento | date: 'dd/MM/yyyy'}}</p>
+=======
+      <div class="card">
+        <div class="card-body corfundo">
+            <div class="container-fluid row d-flex p-0 m-0">
+          <h5 class="card-title">{{postagem.usuario.nome}}</h5>
+            <li>
+            <img src="{{postagem.usuario.foto}}" alt="imagem do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
+        </li>
+    </div>
+        <p class="card-text">{{postagem.dataEvento | date: 'dd/MM/yyyy'}}</p>
+>>>>>>> 50f67f4a1c2a2c1fd54cda56fbcb2bbc638fa0fc
           <!-- <a href="#" class="btn corbotao mr-4">EU VOU!</a>
           <a href="#" class="btn corbotao">Curtir</a> -->
         </div>        

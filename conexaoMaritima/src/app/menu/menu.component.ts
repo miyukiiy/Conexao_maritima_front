@@ -38,8 +38,11 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+<<<<<<< HEAD
     window.scroll(0,0)
     
+=======
+>>>>>>> 50f67f4a1c2a2c1fd54cda56fbcb2bbc638fa0fc
     this.postagemService.refreshToken()
     this.temaService.refreshToken()
     this.authService.refreshToken()
