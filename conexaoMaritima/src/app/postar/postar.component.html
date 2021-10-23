@@ -37,14 +37,15 @@ height="90vh" width= "210vh">
       </div>
 
      <div class="mt-3">
-      <button class="btn mr-3"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-<!-- Curtidas: {{postagem.curtir}} -->
+      <button class="btn mr-3"  (click)='curtida(postagem.id)'><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+Curtidas: {{postagem.curtir}}
 
-<button class="btn mr-3"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
-<!-- Descurtidas: {{postagem.descurtir}} -->
+<button class="btn mr-3" (click)='getPostagemById(postagem.id)' (click)='descurtida(postagem.id)'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
 
-<button class="btn"><i class="fa fa-users" aria-hidden="true"></i></button>
+<button class="btn" (click)='getPostagemById(postagem.id)' (click)='participar(postagem.id)'><i class="fa fa-users" aria-hidden="true"></i></button>
+Participantes: {{postagem.participar}}
 <!-- Participantes: -->
+
 </div>
 
     </div>

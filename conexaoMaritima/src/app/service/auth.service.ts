@@ -24,9 +24,6 @@ export class AuthService {
     }
   }
 
-
-
-
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
     return this.http.post<UsuarioLogin>('https://conexaomaritima.herokuapp.com/usuarios/logar', usuarioLogin)
  }

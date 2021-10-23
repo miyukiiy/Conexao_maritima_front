@@ -7,105 +7,11 @@ html{
 
 .wavetop{
     background: #FFEEAD;
-    margin-top: -100px;
+    margin-top: -80px; 
 
 }
 
 .corfundo{
     background: #FFEEAD;
-}
-
-.pontos {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.color{
-    color: black;
-    min-width: 10px;
-    min-height: 10vh;
-    font-size: 0.9rem;
-    background-color: white;
-    border: none;
-    padding: 2px 20px;
-    border-radius: 10px;
-
-}
-
-.fundo1 {
-    background-color: #7CCEBA; 
-}
-.fundo2 {
-    background-color: #FFEEAD; 
-}
-
-.carousel-inner {
-    background-color: #2165BF;
-
-}
-
-.controls-top {
-    background-color:#2165BF; 
-}
-
-.btn-carousel{
-    padding: top 15px;
-}
-
-.coramarela {
-    background-color: #FFEEAD;
-}
-
-.controls-top2 {
-    background-color: #FFEEAD;
-}
-
-.card {
-    border-radius: 20px;
-}
-
-.card-img-top {
-    border-radius: 20px;
-}
-
-.margem{
-    padding-bottom: 50px;
-}
-
-.fundolista{
-    background-color: #FFEEAD;
-    margin-top: -150px;
-    
-}
-
-.list{
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.imgcarrossel{
-    height: 90vh;
-    width: 210vh;
-
-}
-.cardtitulo{
-    font-weight: bold;
-}
-.cards{
-    font-size: 20px;
-}
-
-
-@media (max-width : 768px) {
-    .fundolista {
-    
-        margin-top: 15px;
-    }
-
-    .imgcarrossel{
-        height: 40vh;
-        width: 110vh;
-    }
 }
 
