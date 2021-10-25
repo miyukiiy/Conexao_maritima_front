@@ -13,4 +13,5 @@ export class Postagem{
      public curtir: number
      public descurtir: number
      public participar: number
+     public localEvento: string
 }

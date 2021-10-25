@@ -54,5 +54,10 @@ export class PostagemService {
     return this.http.put<Postagem>(`https://conexaomaritima.herokuapp.com/postagens/participar/${id}`, this.token)
  }
 
+/*  getByTituloPostagem(): Observable<Postagem[]>{
+  return this.http.get<Postagem[]>('https://conexaomaritima.herokuapp.com/postagens/titulo', this.token)
+} */
+
+
 
 }

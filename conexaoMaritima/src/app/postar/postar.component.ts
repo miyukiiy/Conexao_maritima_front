@@ -19,6 +19,9 @@ export class PostarComponent implements OnInit {
   idUsuario = environment.id
   idPostagem: Postagem;
   listaPostagens: Postagem[];
+  postagemCurtir: Postagem = new Postagem()
+  postagemDescurtir: Postagem = new Postagem()
+  postagemParticipar: Postagem = new Postagem()
 
   constructor(
     private router: Router,
@@ -70,21 +73,27 @@ export class PostarComponent implements OnInit {
     })  }
   
   curtida(id: number) {
-    this.postagemService.putCurtir(id).subscribe(() => {
-    this.getAllPostagens()
+    this.postagemService.putCurtir(id).subscribe((resp: Postagem) => {
+    this.postagem = resp
+    this.getPostagemById(id)
+    this.postagemCurtir = new Postagem()
   })
   
   }
   
   descurtida(id: number) {
-        this.postagemService.putDescurtir(id).subscribe(() => {
+        this.postagemService.putDescurtir(id).subscribe((resp: Postagem) => {
+        this.postagem = resp
         this.getAllPostagens()
+        this.postagemDescurtir = new Postagem()
   })
   }
   
   participar(id: number) {
-      this.postagemService.putParticipar(id).subscribe(() => {
-      this.getAllPostagens()
+    this.postagemService.putParticipar(id).subscribe((resp: Postagem) => {
+    this.postagem = resp
+    this.getAllPostagens()
+    this.postagemParticipar = new Postagem()
   })
   
   }
