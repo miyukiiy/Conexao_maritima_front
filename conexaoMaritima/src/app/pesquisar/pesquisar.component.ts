@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { AuthService } from '../service/auth.service';
@@ -12,44 +13,81 @@ import { TemaService } from '../service/tema.service';
 })
 export class PesquisarComponent implements OnInit {
 
-  stringPesquisa: string;
-  postagem1 = Postagem;
-  postagem: Postagem = new Postagem();
-  listaPostagens: Postagem[];
-  idPostagem = environment.id;
-  listaPostagemMaisCurtidas: Postagem[];
+  titulo: string
+  tituloPost: string
+  listaPostagens: Postagem[]
+  stringPesquisa: string
 
+  
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
-  ) { }
+    private authService: AuthService,
+    private route : ActivatedRoute,
+    private router: Router
+  ) { 
+    router.events.subscribe((e) => {
 
-  
+      if (e instanceof NavigationEnd) {
+        route.params.subscribe(p => {
+          this.stringPesquisa = p.nome
+        })
+
+        this.BuscarPostagem(this.stringPesquisa)
+      }
+    })
+  }
 
   ngOnInit() {
     window.scroll(0, 0)
+    
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+      alert('Faça login ou cadastre-se para buscar o evento!')
+    }
 
     this.postagemService.refreshToken()
     this.temaService.refreshToken()
     this.authService.refreshToken()
+    this.stringPesquisa = ""
+    this.getPostagensByTitulo()
   }
 
-/*   BuscarPostagem(titulo: string) {
-   this.stringPesquisa != undefined 
-      this.postagemService
-        .getByTituloPostagem()
-        .subscribe((resp: Postagem[]) => {
-          this.listaPostagens = resp;
-        });
+  getPostagensByTitulo(){
+    this.postagemService.getPostagemByTitulo(this.titulo).subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
 
-        findByTituloPostagem() 
-          this.postagemService
-          .getByTituloPostagem(this.titulo)
-          .subscribe((resp: Postagem[]) => {
-            this.listaPostagens = resp;
-          });
+      console.log(this.listaPostagens)
+    })
+  }
 
-} */
+  
+  getAllPostagem(){
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+  }
+
+  BuscarPostagem(nome: string) {
+    if (this.stringPesquisa != undefined) {
+      this.postagemService.getPostagemByTitulo(nome).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    } else {
+      this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+}
+
+findByTituloPostagem(){
+  if(this.tituloPost == ''){
+    this.getAllPostagem()
+  }else{
+  this.postagemService.getPostagemByTitulo(this.tituloPost).subscribe((resp: Postagem[])=> {
+    this.listaPostagens = resp
+  })
+}
+}
 
 }

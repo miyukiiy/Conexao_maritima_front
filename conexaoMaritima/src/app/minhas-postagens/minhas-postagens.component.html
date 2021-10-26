@@ -4,7 +4,7 @@
 
 <div class="corfundo pt-3 pb-5">
 
-  <div class="row">
+  <div class="row p-0 m-0">
     <div class="col-md-12">
         <h1 class="text-center text-secondary pb-5">Suas Postagens</h1>
     </div>
@@ -13,10 +13,10 @@
 <div class="container-fluid d-flex corfundo">
 
 
-  <div class="carousel-item active col-md-12">
+  <div class="carousel-item active col-md-12 ">
     <div class="col-md-3 mb-5" style="float:left" *ngFor='let postagem of usuario.postagem'>
-      <div class="card mb-2" style="height: 450px;">
-        <img class="card-img-top" src="{{postagem.fotoPostagem}}" width="250px" height="250px" alt="Card image cap">
+      <div class="card mb-2 list" style="height: 440px;">
+        <img class="card-img-top list" src="{{postagem.fotoPostagem}}" width="250px" height="250px" alt="Card image cap">
         <div class="card-body d-flex flex-column justify-content-between">
           <h4 class="card-title pontos">{{postagem.titulo}}</h4>
           

@@ -30,8 +30,8 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0  justify-content-end align-items-end ">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-      <button [routerLink]="['/pesquisar', postagem.titulo]" class="btn btn-outline my-2 my-sm-0 botao-cor" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <input [(ngModel)]="tituloPost" name="tituloPost" (keyup)="pesquisarPostagem(tituloPost)" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-outline my-2 my-sm-0 botao-cor" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
     </form>
 
     <ul class="navbar-nav ml-auto d-flex align-items-center fonte-cor"> 

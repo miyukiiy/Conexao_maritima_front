@@ -15,3 +15,13 @@ html{
     background: #FFEEAD;
 }
 
+.pontos {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list{
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
