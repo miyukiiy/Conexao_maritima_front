@@ -77,6 +77,10 @@ export class InicioComponent implements OnInit {
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
 
+    if(this.postagem.fotoPostagem == null || this.postagem.fotoPostagem == ''){
+      this.postagem.fotoPostagem = 'https://i.imgur.com/wzLaNQF.png'
+    }
+
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
