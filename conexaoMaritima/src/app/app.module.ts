@@ -21,6 +21,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { PostarComponent } from './postar/postar.component';
 import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
+import { PesquisarComponent } from './pesquisar/pesquisar.component';
 
 
 
@@ -40,7 +41,8 @@ import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.co
     PostagemDeleteComponent,
     UserEditComponent,
     PostarComponent,
-    MinhasPostagensComponent
+    MinhasPostagensComponent,
+    PesquisarComponent
   ],
   imports: [
     BrowserModule,

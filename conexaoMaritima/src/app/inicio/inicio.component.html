@@ -6,21 +6,21 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://i.imgur.com/wzLaNQF.png" class="d-block w-100 imgcarrossel" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Seja Bem-vindo!</h3>
-        <p>A sua rede social sobre vida marinha.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.imgur.com/u1Oj44f.png" class="d-block w-100 imgcarrossel" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Seja Bem-vindo!</h3>
-        <p>A sua rede social sobre vida marinha.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
       <img src="https://i.imgur.com/ptVBGmi.png" class="d-block w-100 imgcarrossel" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Seja Bem-vindo!</h3>
+        <p>A sua rede social sobre vida marinha.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/XO0xfms.png" class="d-block w-100 imgcarrossel" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Seja Bem-vindo!</h3>
+        <p>A sua rede social sobre vida marinha.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.imgur.com/NNiJlk7.png" class="d-block w-100 imgcarrossel" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h3>Seja Bem-vindo!</h3>
         <p>A sua rede social sobre vida marinha.</p>
@@ -165,9 +165,9 @@
               <input [(ngModel)]='postagem.dataEvento' type="date" class="form-control" name="dataEvento" id="dataEvento" rows="3">
             </div>
 
-             <div class="form-group">
-              <label for="fotoPostagem">Link da Foto</label>
-              <input [(ngModel)]='postagem.fotoPostagem' type="text" class="form-control" id="fotoPostagem" placeholder="Digite o Link da Postagem">
+            <div class="form-group">
+              <label for="fotoPostagem">Link da Foto - Campo Opcional</label>
+              <input [(ngModel)]='postagem.fotoPostagem' type="text" class="form-control" id="fotoPostagem" placeholder="Digite o Link da Foto">
             </div> 
 
             <div class="form-group">
@@ -187,8 +187,8 @@
         </div>
       </div>
     </div>
-  
+  </div>
+  <app-rodape *ngIf='!logado()'></app-rodape>
+  </div>
 
 
-    
-  

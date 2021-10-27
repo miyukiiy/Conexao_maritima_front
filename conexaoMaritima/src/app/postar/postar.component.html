@@ -31,20 +31,22 @@ height="90vh" width= "210vh">
             <h5 class="card-title pl-3">Postado por {{postagem.usuario.nome}}</h5>
     </div>
         <p class="card-text">Data do evento {{postagem.dataEvento | date: 'dd/MM/yyyy'}}</p>
+        <p class="card-text">Local do evento: {{postagem.localEvento}}</p>
           <!-- <a href="#" class="btn corbotao mr-4">EU VOU!</a>
           <a href="#" class="btn corbotao">Curtir</a> -->
         </div>        
       </div>
 
      <div class="mt-3">
-      <button class="btn mr-3"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-<!-- Curtidas: {{postagem.curtir}} -->
+      <button class="btn mr-3"  (click)='curtida(postagem.id)'><i class="fa fa-thumbs-up"  aria-hidden="true">{{postagem.curtir}}</i></button> 
+ 
 
-<button class="btn mr-3"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
-<!-- Descurtidas: {{postagem.descurtir}} -->
+<button class="btn mr-3" (click)='descurtida(postagem.id)'><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
 
-<button class="btn"><i class="fa fa-users" aria-hidden="true"></i></button>
+<button class="btn" (click)='participar(postagem.id)'><i class="fa fa-users" aria-hidden="true">{{postagem.participar}}</i></button>
+
 <!-- Participantes: -->
+
 </div>
 
     </div>

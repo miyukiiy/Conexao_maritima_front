@@ -21,7 +21,21 @@ html{
     white-space: nowrap;
 }
 
-.list{
+.border{
     border-radius: 20px;
-    margin-bottom: 20px;
 }
+
+
+
+
+.form-group input{
+    font-size: 0.9rem;
+    background-color: white;
+    border: none;
+    padding: 2px 10px;
+    border-radius: 50px;
+}
+
+/* .center{
+    align-content: center;
+} */

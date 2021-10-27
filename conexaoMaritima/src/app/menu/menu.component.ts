@@ -15,6 +15,9 @@ import { TemaService } from '../service/tema.service';
 })
 export class MenuComponent implements OnInit {
 
+  tituloPost: string
+
+
   nome = environment.nome
   foto = environment.foto
   id = environment.id
@@ -86,6 +89,7 @@ export class MenuComponent implements OnInit {
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens() 
+      this.router.navigate(['/inicio'])
     })
 
   }
@@ -110,4 +114,7 @@ export class MenuComponent implements OnInit {
     return ok;
   }
   
+  pesquisarPostagem(nome: string) {
+    this.router.navigate([`/pesquisar/${nome}`])
+  }
 }

@@ -5,6 +5,7 @@ import { Postagem } from '../model/Postagem';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-postar',
@@ -16,13 +17,18 @@ export class PostarComponent implements OnInit {
   postagem: Postagem = new Postagem()
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
-  idPostagem: number
+  idPostagem: Postagem;
+  listaPostagens: Postagem[];
+  postagemCurtir: Postagem = new Postagem()
+  postagemDescurtir: Postagem = new Postagem()
+  postagemParticipar: Postagem = new Postagem()
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
-    private authService: AuthService
+    private authService: AuthService,
+    private temaService: TemaService
   ) { }
 
   ngOnInit() {
@@ -37,6 +43,8 @@ export class PostarComponent implements OnInit {
     this.findByIdPostagem(id)
     this.findByIdUsuario()
     this.authService.refreshToken()
+    this.temaService.refreshToken()
+    this.postagemService.refreshToken()
     this.postagemService.getAllPostagens()
     this.postagemService.getByIdPostagem(id)
   }
@@ -53,28 +61,39 @@ export class PostarComponent implements OnInit {
     })
   }
 
-  // getPostagemById(id: number) {
-  //   this.postagemService.getByIdPostagem(this.idPostagem).subscribe((resp: Postagem) =>{
-  //     this.idPostagem = resp
-  //   })
-  //  }
+  getAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp;
+    });
+  }
+
+  getPostagemById(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) =>{
+    this.idPostagem = resp
+    })  }
   
   curtida(id: number) {
-     this.postagemService.putCurtir(id).subscribe(() => {
-    this.postagemService.getAllPostagens()
+    this.postagemService.putCurtir(id).subscribe((resp: Postagem) => {
+    this.postagem = resp
+    this.getPostagemById(id)
+    this.postagemCurtir = new Postagem()
   })
   
   }
   
   descurtida(id: number) {
-       this.postagemService.putDescurtir(id).subscribe(() => {
-        this.postagemService.getAllPostagens()
+        this.postagemService.putDescurtir(id).subscribe((resp: Postagem) => {
+        this.postagem = resp
+        this.getAllPostagens()
+        this.postagemDescurtir = new Postagem()
   })
   }
   
   participar(id: number) {
-     this.postagemService.putParticipar(id).subscribe(() => {
-      this.postagemService.getAllPostagens()
+    this.postagemService.putParticipar(id).subscribe((resp: Postagem) => {
+    this.postagem = resp
+    this.getAllPostagens()
+    this.postagemParticipar = new Postagem()
   })
   
   }

@@ -24,13 +24,13 @@
         <a class="nav-link" href="#">NOVA POSTAGEM<span class="sr-only">(current)</span></a>
       </li>
 
-      <!-- <li *ngIf="logado()" class="nav-item active item-form">
+       <li *ngIf="logado()" class="nav-item active item-form">
         <a class="nav-link" routerLink='/minhas-postagens'>MINHAS POSTAGENS<span class="sr-only">(current)</span></a>
-      </li> -->
+      </li> 
 
     </ul>
     <form class="form-inline my-2 my-lg-0  justify-content-end align-items-end ">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+      <input [(ngModel)]="tituloPost" name="tituloPost" (keyup)="pesquisarPostagem(tituloPost)" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
       <button class="btn btn-outline my-2 my-sm-0 botao-cor" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
     </form>
 
@@ -58,7 +58,7 @@
 </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -84,6 +84,11 @@
           <input [(ngModel)]='postagem.dataEvento' type="date" class="form-control" name="dataEvento" id="dataEvento" rows="3">
         </div>
 
+        <div class="form-group">
+          <label for="localEvento">Local do evento</label>
+          <input [(ngModel)]='postagem.localEvento' type="text" class="form-control" id="localEvento" placeholder="Digite o Local do evento">
+        </div>
+
          <div class="form-group">
           <label for="fotoPostagem">Link da Foto</label>
           <input [(ngModel)]='postagem.fotoPostagem' type="text" class="form-control" id="fotoPostagem" placeholder="Digite o Link da Postagem">
@@ -105,7 +110,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
   
 
 

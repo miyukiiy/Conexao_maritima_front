@@ -133,3 +133,19 @@ html{
 .tamanho{
     font-size: 35px;
 }
+
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 8px;
+    font-size: 25px;
+}
+
+ul.social-network li .fa{
+    color: #000000;
+}

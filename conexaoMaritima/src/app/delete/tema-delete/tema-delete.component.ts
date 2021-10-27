@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AuthService } from 'src/app/service/auth.service';
+import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -18,7 +20,10 @@ export class TemaDeleteComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService,
+    private postagemService: PostagemService
+
   ) { }
 
   ngOnInit(){
@@ -31,6 +36,9 @@ export class TemaDeleteComponent implements OnInit {
 
     this.idTema = this.route.snapshot.params['id']
     this.findByIdTema(this.idTema)
+    this.postagemService.refreshToken()
+    this.temaService.refreshToken()
+    this.authService.refreshToken()
   }
 
   findByIdTema(id: number){

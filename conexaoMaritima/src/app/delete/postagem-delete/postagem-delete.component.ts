@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
+import { AuthService } from 'src/app/service/auth.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
@@ -20,6 +21,8 @@ export class PostagemDeleteComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
+    private authService: AuthService,
+    private temaService: TemaService
   ) { }
 
   ngOnInit(){
@@ -31,6 +34,9 @@ export class PostagemDeleteComponent implements OnInit {
     
         this.idPost = this.route.snapshot.params['id']
         this.findByIdPostagem(this.idPost)
+        this.postagemService.refreshToken()
+        this.temaService.refreshToken()
+        this.authService.refreshToken()
       }
     
       findByIdPostagem(id: number){
