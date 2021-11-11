@@ -1,7 +1,13 @@
 <h1 align="center">
 	<img src="https://i.imgur.com/1ivr7ac.png"  alt="Logo"  width="400"><br><br>
-    Conexão Marítima
+	Conexão Marítima
 </h1>
+
+<div align="center">
+<a href="https://conexao-maritma.netlify.app/#/inicio" target="_blank">
+        <img width="250" src="https://img.shields.io/website-conexão marítima-down-blue-red/http/monip.org.svg">
+</a>
+</div>
 
 <div>
     <p align="center">
@@ -63,7 +69,7 @@
 
 <div>
     <p align="center">
-        O Conexão Marítima é uma rede social que faz um chamado para a ação, nela reunimos eventos para discutir as questões ambientais, organizar mutirões para reciclagem e dentre tantas outras coisas que levem a mudança do nosso meio ambiente.
+        O Conexão Marítima é uma plataforma que faz um chamado para a ação, nela reunimos eventos  para discutir as questões ambientais, organizar mutirões para reciclagem e dentre tantas outras coisas que levem a mudança do nosso meio ambiente.
     </p>
 </div>
 
