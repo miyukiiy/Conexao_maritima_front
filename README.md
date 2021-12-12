@@ -105,7 +105,7 @@
   ---
 ### 1. Clone this repository
 ```
-git clone https://github.com/Yuri-stack/BlogPessoalGen.git
+git clone https://github.com/miyukiiy/Conexao_maritima_front.git
 ```
 ---
 ### 2. Install the dependencies
